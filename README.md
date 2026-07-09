@@ -1,4 +1,4 @@
-# 📚 AI Study Assistant
+# 📚 StudyBuddy
 
 Upload a PDF, DOCX, or PPTX and ask questions about it, or generate a
 summary — all running **locally and free**, using a RAG (Retrieval-Augmented
