@@ -65,17 +65,10 @@ study-assistant/
 └── README.md
 ```
 
-## Notes / known limitations
+## limitations
 
 - **First upload is slow**: the first time you run it, `sentence-transformers` downloads the embedding model (~90MB) from Hugging Face. After that it's cached locally and fast.
 - **Scanned/image-only PDFs** won't extract text (no OCR is included). If you need that, add `pytesseract` + `pdf2image`.
 - **Local models are weaker than GPT-4/Claude-class models.** An 8B model on a CPU-only laptop can be slow and occasionally less precise. This is the trade-off for a free, offline, API-key-less project — try a smaller model like `phi3` if `llama3.1:8b` is too slow.
 - **Each new upload resets the vector index** (by design, so you don't mix content from different documents). To support multiple documents at once, you'd tag chunks with a document ID and filter queries by it.
 
-## Ideas to extend this (good for a resume bullet point)
-
-- Add OCR support for scanned PDFs
-- Support multiple documents simultaneously with source citations
-- Add a "flashcard generator" mode using the same RAG context
-- Swap Ollama for a cloud API (Claude/OpenAI) as an optional toggle for higher-quality answers
-- Deploy with Docker so it runs anywhere without manual setup
